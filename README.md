@@ -1,4 +1,4 @@
-# node-image-stream-docker
+# node-image-steam-docker
 
 * AWS_S3_ENDPOINT
 * AWS_S3_ENDPOINT_PORT
