@@ -4,10 +4,14 @@ RUN apk add vips-dev fftw-dev build-base git cmake python --update-cache \
   --repository https://alpine.global.ssl.fastly.net/alpine/edge/testing/ \
   --repository https://alpine.global.ssl.fastly.net/alpine/edge/main
 
-RUN npm install -g image-steam image-steam-s3
-
 ADD index.js index.js
+
+USER node
+RUN mkdir /home/node/.npm-global
+ENV PATH=/home/node/.npm-global/bin:$PATH
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
+RUN npm install -g image-steam image-steam-s3
 
 EXPOSE 13337
 
-CMD node index.js
+ENTRYPOINT node index.js
