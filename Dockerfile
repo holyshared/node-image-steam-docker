@@ -4,6 +4,8 @@ RUN apk add nodejs npm vips-dev fftw-dev build-base --update-cache \
   --repository https://alpine.global.ssl.fastly.net/alpine/edge/testing/ \
   --repository https://alpine.global.ssl.fastly.net/alpine/edge/main
 
+RUN addgroup -S node && adduser -S node -G node
+
 ADD index.js index.js
 
 USER node
