@@ -8,14 +8,12 @@ RUN addgroup -S node && adduser -S node -G node
 
 
 USER node
-RUN mkdir /home/node/.npm-global
-ENV PATH=/home/node/.npm-global/bin:$PATH
-ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
-RUN npm install -g image-steam image-steam-s3
-
+RUN mkdir /home/node
 WORKDIR /home/node
 ADD index.js /home/node/index.js
+ADD package.json /home/node/package.json
+RUN npm install
 
 EXPOSE 13337
 
-ENTRYPOINT node index.js
+ENTRYPOINT npm start

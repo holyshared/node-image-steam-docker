@@ -1,0 +1,23 @@
+{
+  "name": "image-stream-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holyshared/node-image-stream-docker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/holyshared/node-image-stream-docker/issues"
+  },
+  "homepage": "https://github.com/holyshared/node-image-stream-docker#readme",
+  "dependencies": {
+    "image-steam": "^0.48.1",
+    "image-steam-s3": "^1.1.0"
+  }
+}
