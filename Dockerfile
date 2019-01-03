@@ -6,13 +6,15 @@ RUN apk add nodejs npm python vips-dev fftw-dev build-base --update-cache \
 
 RUN addgroup -S node && adduser -S node -G node
 
-ADD index.js index.js
 
 USER node
 RUN mkdir /home/node/.npm-global
 ENV PATH=/home/node/.npm-global/bin:$PATH
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 RUN npm install -g image-steam image-steam-s3
+
+WORKDIR /home/node
+ADD index.js /home/node/index.js
 
 EXPOSE 13337
 
