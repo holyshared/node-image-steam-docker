@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.8
 LABEL maintainer "Noritaka Horio <holy.shared.design@gmail.com>"
 RUN apk add nodejs npm vips-dev fftw-dev build-base --update-cache \
   --repository https://alpine.global.ssl.fastly.net/alpine/edge/testing/ \
