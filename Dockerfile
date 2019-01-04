@@ -8,7 +8,7 @@ RUN addgroup -S node && adduser -S node -G node
 
 
 USER node
-RUN mkdir /home/node
+#RUN mkdir /home/node
 WORKDIR /home/node
 ADD index.js /home/node/index.js
 ADD package.json /home/node/package.json
