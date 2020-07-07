@@ -1,6 +1,6 @@
-FROM alpine:3.10
+FROM alpine:3.12
 LABEL maintainer "Noritaka Horio <holy.shared.design@gmail.com>"
-RUN apk add nodejs npm python fftw-dev build-base --update-cache \
+RUN apk add nodejs npm python2 git cmake fftw-dev build-base --update-cache \
   --repository https://alpine.global.ssl.fastly.net/alpine/edge/testing/ \
   --repository https://alpine.global.ssl.fastly.net/alpine/edge/main
 
