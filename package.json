@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/holyshared/node-image-stream-docker#readme",
   "dependencies": {
-    "image-steam": "^0.52.0",
+    "image-steam": "^0.56.0",
     "image-steam-s3": "^1.1.0"
   }
 }
